@@ -1,23 +1,40 @@
 .btn
-  border: 1px solid $dark
+  border: 1px solid $white
   border-radius: 26px
   background-color: $white
   padding: 7px 16px
   font-size: 15px
   text-decoration: none
-  color: $white
-  text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
+  color: $orange
   font-weight: 600
   cursor: pointer
+  transition: all 0.25s ease-in-out
 
   &:focus,
   &:active
     outline: none
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
+
+  &:hover
+    background-color: darken($orange, 3%)
+    border-color: darken($orange, 5%)
+    color: $white
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
+
+  &:focus,
+  &:active
+    background-color: darken($orange, 5%)
+    border-color: darken($orange, 7%)
+    color: $white
 
 
+
+  // Primary button
   &.btn-primary
     background-color: $orange
     border-color: $orange
+    color: $white
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
 
     &:hover
       background-color: darken($orange, 3%)
@@ -27,6 +44,12 @@
     &:active
       background-color: darken($orange, 5%)
       border-color: darken($orange, 7%)
+
+
+
+  // Sizes
+  &.btn-md
+    padding: 14px 36px
 
   &.btn-lg
     padding: 14px 66px
