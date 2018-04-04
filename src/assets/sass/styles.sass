@@ -1,7 +1,6 @@
 @import "varibles"
 @import "helpers"
 @import "buttons"
-@import "grid"
 
 body
   margin: 0
@@ -111,10 +110,8 @@ p
 
 
 // Content
-.background-picture
+.fitness-center
   height: 786px
-  background-repeat: no-repeat
-  background-size: cover
   color: $white
   display: flex
   justify-content: center
@@ -124,6 +121,11 @@ p
 
   img
     width: 100%
+    
+  .content
+    position: absolute
+    text-align: center
+    max-width: 50%
 
 
 .container
@@ -206,3 +208,74 @@ p
         position: fixed
         display: block
         font-weight: 400
+
+
+.about-us
+  height: 1029px
+  color: $white
+  display: flex
+  justify-content: center
+  overflow: hidden
+  width: 100%
+
+  img
+    width: 100%
+
+  .content
+    position: absolute
+    margin-top: 40px
+    width: 100%
+
+    .text
+      width: 50%
+      font-size: 22px
+      margin-left: auto
+      margin-right: auto
+
+    .advantages
+      display: flex
+
+      .advantage
+        width: 25%
+        padding: 20px
+
+        .icon
+          width: 42px
+          border: 2px solid rgba(238, 238, 238, 0.4)
+          border-radius: 50%
+          padding: 18px
+
+    .video
+      position: relative
+      display: block
+      height: 0
+      padding: 0
+      overflow: hidden
+      padding-bottom: 43%
+      width: 70%
+      margin: 0 auto
+      background: url("/images/video-background.png") no-repeat center center
+      margin-top: 40px
+
+      .youtube
+        position: relative
+        display: block
+        overflow: hidden
+        transition: all 200ms ease-out
+        cursor: pointer
+        z-index: 10
+
+        .play
+          background: url("/images/play-button.png") no-repeat center center
+          background-size: 64px 64px
+          position: absolute
+          height: 100%
+          width: 100%
+          opacity: .8
+          filter: alpha(opacity=80)
+          transition: all 0.2s ease-out
+
+        &:hover
+          opacity: 1
+          filter: alpha(opacity=100)
+

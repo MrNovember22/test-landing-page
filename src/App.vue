@@ -78,8 +78,9 @@
     <!-- END NAVBAR -->
 
     <!-- FITNESS CENTER -->
-    <div class="background-picture text-center" style="background-image: url(/images/background-1.jpg);">
-      <div class="col-md-6">
+    <div class="fitness-center text-center">
+      <img src="/images/background-1.jpg">
+      <div class="content">
         <h1>Фитнесс Центр</h1>
         <h5>Начните свой путь к здоровому образу жизни с помощью наших персонализированных программ</h5>
         <button type="button" class="btn btn-primary btn-lg">Записаться</button>
@@ -145,11 +146,40 @@
     </div>
     <!-- END SERVICES -->
 
-    <div class="background-picture text-center" style="background-image: url(/images/background-2.png);">
-      <div class="hr-text">
-        <span>О нас</span>
+    <div class="about-us text-center">
+      <img src="/images/background-2.png">
+      <div class="content">
+        <div class="container">
+          <div class="hr-text">
+            <span>О нас</span>
+          </div>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis nisi condimentum nunc vulputate molestie.</p>
+
+          <div class="advantages">
+            <div class="advantage">
+              <img class="icon" src="/images/icons/dumbbell.png">
+              <p>Эксклюзивное новое оборудование</p>
+            </div>
+            <div class="advantage">
+              <img class="icon" src="/images/icons/football-whistle-of-referee.png">
+              <p>Индивидуальный подход к тренеровкам</p>
+            </div>
+            <div class="advantage">
+              <img class="icon" src="/images/icons/discount-sticker-with-percentage.png">
+              <p>Скидочные программы для постоянных клиентов</p>
+            </div>
+            <div class="advantage">
+              <img class="icon" src="/images/icons/roll-mat-variant.png">
+              <p>Мы предоставляем свой спортинвентарь</p>
+            </div>
+          </div>
+          
+          <div class="video">
+            <div class="youtube" id="EykWcFEtFqo" style="width:800px; height:480px"></div>
+          </div>
+        </div>
       </div>
-    </div>
+     </div>
   </div>
 </template>
 
