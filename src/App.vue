@@ -77,9 +77,13 @@
     </div>
     <!-- END NAVBAR -->
 
-    <div class="background-picture" style="background-image: url(/images/scott.jpg);">
+    <div class="background-picture text-center" style="background-image: url(/images/scott.jpg);">
+      <div class="col-md-6">
+        <h1>Фитнесс Центр</h1>
+        <h5>Начните свой путь к здоровому образу жизни с помощью наших персонализированных программ</h5>
+        <button type="button" class="btn btn-primary btn-lg">Записаться</button>
+      </div>
     </div>
-    <h1>{{ msg }}</h1>
   </div>
 </template>
 
