@@ -84,6 +84,57 @@
         <button type="button" class="btn btn-primary btn-lg">Записаться</button>
       </div>
     </div>
+
+    <div class="container">
+      <hr class="hr-text" data-content="Услуги">
+
+      <div class="services">
+        <div class="service selected">
+          <img src="/images/trainer.png">
+
+          <div class="description">
+            <div class="title">
+              <h2>Личный тренер</h2>
+              <div class="price">
+                235грн
+              </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis nisi condimentum nunc vulputate molestie.</p>
+            <button class="btn btn-outline btn-md">Подробнее</button>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="/images/jim.png">
+
+          <div class="description">
+            <div class="title">
+              <h2>Тренажерный зал</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="/images/group.png">
+
+          <div class="description">
+            <div class="title">
+              <h2>Групповые занятия</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="/images/boxing.png">
+
+          <div class="description">
+            <div class="title">
+              <h2>Бокс</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

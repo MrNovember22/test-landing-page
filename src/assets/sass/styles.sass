@@ -22,8 +22,9 @@ a
   text-decoration: none
   outline: none
 
-.container
-  padding: 0 115px
+p
+  line-height: 1.25
+
 
 // Contacts
 .contacts
@@ -35,13 +36,13 @@ a
   height: 48px
   padding: 0 115px
 
-.social-links
-  .svg-inline--fa
-    color: $white
-    margin: 0 2px
+  .social-links
+    .svg-inline--fa
+      color: $white
+      margin: 0 2px
 
-    &:hover
-      color: $orange
+      &:hover
+        color: $orange
 
 
 
@@ -83,10 +84,12 @@ a
         display: flex
         -webkit-box-align: center
         cursor: pointer
-
         align-items: center
         justify-content: center
         color: $dark
+
+        &:hover
+          color: $orange
 
 
 
@@ -99,3 +102,72 @@ a
   display: flex
   justify-content: center
   align-items: center
+
+
+
+.container
+  padding: 40px 115px
+
+.hr-text
+  line-height: 1em
+  position: relative
+  outline: 0
+  border: 0
+  color: black
+  text-align: center
+  margin-bottom: 40px
+  width: 33%
+
+  &:before
+    content: ''
+    background: $grey
+    position: absolute
+    left: 0
+    top: 50%
+    width: 100%
+    height: 1px
+
+  &:after
+    content: attr(data-content)
+    position: relative
+    display: inline-block
+    color: $dark
+    padding: 0 32px
+    line-height: 1.5em
+    background-color: $white
+    font-size: 40px
+    font-weight: 600
+
+.services
+  position: relative
+  display: flex
+
+  .service
+    max-width: 25%
+    position: relative
+    color: white
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    max-height: 445px
+    overflow: hidden
+
+    img
+      width: 100%
+      
+    .description
+      position: absolute
+      padding: 0 42px
+      color: $grey
+
+      .title
+        margin-bottom: 20px
+        color: $white
+
+        h2
+          margin-bottom: 20px
+
+    &.selected
+      transform: scale(1.03, 1.03)
+      z-index: 2
