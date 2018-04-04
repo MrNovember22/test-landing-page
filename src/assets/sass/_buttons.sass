@@ -1,0 +1,32 @@
+.btn
+  border: 1px solid $dark
+  border-radius: 26px
+  background-color: $white
+  padding: 7px 16px
+  font-size: 15px
+  text-decoration: none
+  color: $white
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
+  font-weight: 600
+  cursor: pointer
+
+  &:focus,
+  &:active
+    outline: none
+
+
+  &.btn-primary
+    background-color: $orange
+    border-color: $orange
+
+    &:hover
+      background-color: darken($orange, 3%)
+      border-color: darken($orange, 5%)
+
+    &:focus,
+    &:active
+      background-color: darken($orange, 5%)
+      border-color: darken($orange, 7%)
+
+  &.btn-lg
+    padding: 14px 66px

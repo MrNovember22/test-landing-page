@@ -1,5 +1,7 @@
 @import "varibles"
 @import "helpers"
+@import "buttons"
+@import "grid"
 
 body
   margin: 0
@@ -9,19 +11,19 @@ body
   -moz-osx-font-smoothing: grayscale
   color: $dark
 
+h1
+  font-size: 66px
+
+h5
+  font-size: 22px
+  font-weight: 200
+
 a
   text-decoration: none
   outline: none
 
 .container
   padding: 0 115px
-
-.background-picture
-  height: 786px
-  background-repeat: no-repeat
-  background-size: cover
-
-
 
 // Contacts
 .contacts
@@ -85,3 +87,15 @@ a
         align-items: center
         justify-content: center
         color: $dark
+
+
+
+// Content
+.background-picture
+  height: 786px
+  background-repeat: no-repeat
+  background-size: cover
+  color: $white
+  display: flex
+  justify-content: center
+  align-items: center
