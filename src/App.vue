@@ -78,7 +78,7 @@
     <!-- END NAVBAR -->
 
     <!-- FITNESS CENTER -->
-    <div class="background-picture text-center" style="background-image: url(/images/scott.jpg);">
+    <div class="background-picture text-center" style="background-image: url(/images/background-1.jpg);">
       <div class="col-md-6">
         <h1>Фитнесс Центр</h1>
         <h5>Начните свой путь к здоровому образу жизни с помощью наших персонализированных программ</h5>
