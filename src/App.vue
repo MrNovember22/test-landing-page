@@ -4,7 +4,7 @@
     <div class="contacts">
       <p>
         <i class="fa fa-phone"></i>
-        <span class="text-orange">+38 050 32 45 555</span>
+        +38 050 32 45 555
       </p>
       <p>
         <i class="fa fa-envelope"></i>
@@ -23,7 +23,7 @@
             <i class="fab fa-facebook-f"></i>
           </a>
           <a href="#">
-            <i class="fab fa-vk text-orange"></i>
+            <i class="fab fa-vk"></i>
           </a>
           <a href="#">
             <i class="fab fa-youtube"></i>
@@ -49,7 +49,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-orange" href="#">
+          <a class="nav-link active" href="#">
             Услуги
           </a>
         </li>
@@ -89,19 +89,18 @@
 
     <!-- SERVICES -->
     <div class="container">
-      <hr class="hr-text" data-content="Услуги">
+      <div class="hr-text">
+        <span>Услуги</span>
+      </div>
 
       <div class="services">
-        <div class="service selected">
+        <div class="service">
           <img src="/images/trainer.png">
-
+          <div class="title">
+            <h2>Личный тренер</h2>
+          </div>
           <div class="description">
-            <div class="title">
-              <h2>Личный тренер</h2>
-              <div class="price">
-                235грн
-              </div>
-            </div>
+            <p>235грн</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis nisi condimentum nunc vulputate molestie.</p>
             <button class="btn btn-outline btn-md">Подробнее</button>
           </div>
@@ -109,36 +108,48 @@
 
         <div class="service">
           <img src="/images/jim.png">
-
+          <div class="title">
+            <h2>Тренажерный зал</h2>
+          </div>
           <div class="description">
-            <div class="title">
-              <h2>Тренажерный зал</h2>
-            </div>
+            <p>330грн</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis nisi condimentum nunc vulputate molestie.</p>
+            <button class="btn btn-outline btn-md">Подробнее</button>
           </div>
         </div>
 
         <div class="service">
           <img src="/images/group.png">
-
+          <div class="title">
+            <h2>Групповые занятия</h2>
+          </div>
           <div class="description">
-            <div class="title">
-              <h2>Групповые занятия</h2>
-            </div>
+            <p>180грн</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis nisi condimentum nunc vulputate molestie.</p>
+            <button class="btn btn-outline btn-md">Подробнее</button>
           </div>
         </div>
 
         <div class="service">
           <img src="/images/boxing.png">
-
+          <div class="title">
+            <h2>Бокс</h2>
+          </div>
           <div class="description">
-            <div class="title">
-              <h2>Бокс</h2>
-            </div>
+            <p>210грн</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis nisi condimentum nunc vulputate molestie.</p>
+            <button class="btn btn-outline btn-md">Подробнее</button>
           </div>
         </div>
       </div>
     </div>
     <!-- END SERVICES -->
+
+    <div class="background-picture text-center" style="background-image: url(/images/background-2.png);">
+      <div class="hr-text">
+        <span>О нас</span>
+      </div>
+    </div>
   </div>
 </template>
 

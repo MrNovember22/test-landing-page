@@ -36,6 +36,14 @@ p
   height: 48px
   padding: 0 115px
 
+  p
+    &:hover
+      color: $orange
+      cursor: pointer
+
+  .svg-inline--fa
+    color: $white
+
   .social-links
     .svg-inline--fa
       color: $white
@@ -46,15 +54,18 @@ p
 
 
 
+
 // Navbar
 .navbar
   background-color: $white
   height: 75px
-  position: relative
   display: flex
   flex-wrap: wrap
   align-items: center
   padding: 0 115px
+  position: sticky
+  top: 0
+  z-index: 999
 
   .navbar-brand
     line-height: inherit
@@ -80,16 +91,22 @@ p
         margin-right: 0
 
       .nav-link
-        height: 75px
+        height: 73px
         display: flex
         -webkit-box-align: center
         cursor: pointer
         align-items: center
         justify-content: center
         color: $dark
+        border-bottom: 2px solid transparent
+
+        &.active
+          color: $orange
 
         &:hover
           color: $orange
+          border-bottom: 2px solid $orange
+
 
 
 
@@ -102,42 +119,45 @@ p
   display: flex
   justify-content: center
   align-items: center
+  overflow: hidden
+  width: 100%
 
+  img
+    width: 100%
 
 
 .container
   padding: 40px 115px 80px
 
 .hr-text
-  line-height: 1em
-  position: relative
-  outline: 0
-  border: 0
-  color: black
+  display: block
   text-align: center
+  overflow: hidden
+  white-space: nowrap
   margin-bottom: 40px
-  margin-top: 0
-  width: 33%
+  font-size: 40px
 
-  &:before
-    content: ''
-    background: $grey
-    position: absolute
-    left: 0
-    top: 50%
-    width: 100%
-    height: 1px
-
-  &:after
-    content: attr(data-content)
+  span
     position: relative
     display: inline-block
-    color: $dark
-    padding: 0 32px
-    line-height: 1.5em
-    background-color: $white
-    font-size: 40px
-    font-weight: 600
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      width: 100px
+      height: 1px
+      background: $grey0
+
+    &:before
+      right: 100%
+      margin-right: 30px
+
+    &:after
+      left: 100%
+      margin-left: 30px
+
 
 .services
   position: relative
@@ -156,19 +176,33 @@ p
 
     img
       width: 100%
-      
+      position: relative
+
+    .title
+      position: absolute
+      color: $white
+      margin-bottom: 0
+      line-height: 1
+
     .description
       position: absolute
-      padding: 0 42px
-      color: $grey
+      padding: 0 20px
+      color: $grey0
+      text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
+      display: none
 
-      .title
-        margin-bottom: 20px
-        color: $white
+    h2
+      margin-bottom: 20px
 
-        h2
-          margin-bottom: 20px
-
-    &.selected
+    &:hover
       transform: scale(1.03, 1.03)
       z-index: 2
+
+      .title
+        top: 100px
+
+      .description
+        bottom: 100px
+        position: fixed
+        display: block
+        font-weight: 400
