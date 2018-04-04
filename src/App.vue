@@ -77,6 +77,7 @@
     </div>
     <!-- END NAVBAR -->
 
+    <!-- FITNESS CENTER -->
     <div class="background-picture text-center" style="background-image: url(/images/scott.jpg);">
       <div class="col-md-6">
         <h1>Фитнесс Центр</h1>
@@ -84,7 +85,9 @@
         <button type="button" class="btn btn-primary btn-lg">Записаться</button>
       </div>
     </div>
+    <!-- END FITNESS CENTER -->
 
+    <!-- SERVICES -->
     <div class="container">
       <hr class="hr-text" data-content="Услуги">
 
@@ -135,6 +138,7 @@
         </div>
       </div>
     </div>
+    <!-- END SERVICES -->
   </div>
 </template>
 
