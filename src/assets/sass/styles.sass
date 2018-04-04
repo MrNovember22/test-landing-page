@@ -1,0 +1,87 @@
+@import "varibles"
+@import "helpers"
+
+body
+  margin: 0
+  font-size: 15px
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $dark
+
+a
+  text-decoration: none
+  outline: none
+
+.container
+  padding: 0 115px
+
+.background-picture
+  height: 786px
+  background-repeat: no-repeat
+  background-size: cover
+
+
+
+// Contacts
+.contacts
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: $white
+  background-color: $dark
+  height: 48px
+  padding: 0 115px
+
+.social-links
+  .svg-inline--fa
+    color: $white
+    margin: 0 2px
+
+    &:hover
+      color: $orange
+
+
+
+// Navbar
+.navbar
+  background-color: $white
+  height: 75px
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  padding: 0 115px
+
+  .navbar-brand
+    line-height: inherit
+    white-space: nowrap
+    display: inline-block
+
+  .navbar-nav
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    height: 75px
+    list-style: none
+    display: flex
+    float: right
+    margin: 0
+    margin-left: auto
+
+    .nav-item
+      margin: 0 22px
+
+      &:last-of-type
+        margin-right: 0
+
+      .nav-link
+        height: 75px
+        display: flex
+        -webkit-box-align: center
+        cursor: pointer
+
+        align-items: center
+        justify-content: center
+        color: $dark
