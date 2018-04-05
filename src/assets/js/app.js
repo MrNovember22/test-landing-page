@@ -24,3 +24,9 @@ $(function() {
 $('#email-input').on('focus', function () {
    $(this).val('my@');
 });
+
+
+// Modal
+$('[data-toggle="modal"]').on('click', function () {
+    $('#exampleModal').arcticmodal();
+});
