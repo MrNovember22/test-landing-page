@@ -2,6 +2,9 @@
 @import "helpers"
 @import "buttons"
 
+
+
+// Main styles
 body
   margin: 0
   font-size: 15px
@@ -13,9 +16,21 @@ body
 h1
   font-size: 66px
 
+h2
+  font-size: 40px
+
+h3
+  font-size: 34px
+
+h4
+  font-size: 26px
+
 h5
   font-size: 22px
-  font-weight: 200
+
+h6
+  font-size: 18px
+  font-weight: 100
 
 a
   text-decoration: none
@@ -23,6 +38,40 @@ a
 
 p
   line-height: 1.25
+
+.container
+  padding: 40px 115px 80px
+
+.hr-text
+  display: block
+  text-align: center
+  overflow: hidden
+  white-space: nowrap
+  margin-bottom: 40px
+  font-size: 40px
+
+  span
+    position: relative
+    display: inline-block
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      width: 100px
+      height: 1px
+      background: $grey0
+
+    &:before
+      right: 100%
+      margin-right: 30px
+
+    &:after
+      left: 100%
+      margin-left: 30px
+
+
 
 
 // Contacts
@@ -127,40 +176,13 @@ p
     text-align: center
     max-width: 50%
 
-
-.container
-  padding: 40px 115px 80px
-
-.hr-text
-  display: block
-  text-align: center
-  overflow: hidden
-  white-space: nowrap
-  margin-bottom: 40px
-  font-size: 40px
-
-  span
-    position: relative
-    display: inline-block
-
-    &:before,
-    &:after
-      content: ""
-      position: absolute
-      top: 50%
-      width: 100px
-      height: 1px
-      background: $grey0
-
-    &:before
-      right: 100%
-      margin-right: 30px
-
-    &:after
-      left: 100%
-      margin-left: 30px
+    h6
+      color: $grey2
 
 
+
+
+// Services
 .services
   position: relative
   display: flex
@@ -183,7 +205,7 @@ p
     .title
       position: absolute
       color: $white
-      margin-bottom: 0
+      margin: 0
       line-height: 1
 
     .description
@@ -193,15 +215,15 @@ p
       text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
       display: none
 
-    h2
-      margin-bottom: 20px
-
     &:hover
       transform: scale(1.03, 1.03)
       z-index: 2
 
       .title
         top: 100px
+
+        h5
+          margin: 20px 0
 
       .description
         bottom: 100px
@@ -210,6 +232,9 @@ p
         font-weight: 400
 
 
+
+
+// About us
 .about-us
   height: 1029px
   color: $white
@@ -279,6 +304,10 @@ p
           opacity: 1
           filter: alpha(opacity=100)
 
+
+
+
+// Trainers
 .trainers
   display: flex
 
@@ -320,3 +349,90 @@ p
 
         img
           width: 100%
+
+
+
+// First lesson
+.first-lesson
+  height: 100%
+  color: $white
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  width: 100%
+
+  img
+    width: 100%
+
+  .content
+    position: absolute
+    text-align: center
+    max-width: 75%
+
+
+
+// Testimonials
+.testimonials
+  display: flex
+  margin-bottom: 40px
+
+  .testimonial
+    max-width: 33%
+    text-align: center
+    margin: 0 15px
+
+    .testimonial-avatar
+      overflow: hidden
+      width: 100%
+
+      img
+        width: 80px
+
+
+    .testimonial-text
+      padding: 10px 25px
+      color: $grey3
+
+
+    .name
+      h6
+        margin: 0
+
+        .svg-inline--fa
+          color: $grey0
+
+
+  ~ .arrows
+    width: 100%
+    display: flex
+    justify-content: center
+
+    .arrow
+      width: 48px
+      height: 48px
+      border: 2px solid $orange
+      border-radius: 50%
+      opacity: 0.3
+      transition: all .4s ease-in-out
+      text-align: center
+      position: relative
+
+      &:hover
+        opacity: 1
+
+      img
+        width: 30px
+        position: absolute
+
+      &.arrow-left
+        margin-right: 15px
+
+        img
+          top: 9px
+          left: 7px
+
+      &.arrow-right
+        img
+          top: 9px
+          left: 10px
