@@ -258,7 +258,7 @@
                         <img src="/images/trainers/1.png">
                     </div>
                     <div class="testimonial-text">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla."</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
                     </div>
                     <div class="name">
                         <h6>
@@ -273,7 +273,7 @@
                         <img src="/images/trainers/2.png">
                     </div>
                     <div class="testimonial-text">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla."</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
                     </div>
                     <div class="name">
                         <h6>
@@ -288,7 +288,7 @@
                         <img src="/images/trainers/3.png">
                     </div>
                     <div class="testimonial-text">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla."</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
                     </div>
                     <div class="name">
                         <h6>
@@ -309,6 +309,24 @@
             </div>
         </div>
         <!-- END TESTIMONIALS -->
+
+        <!-- NEWSLETTER -->
+        <div class="newsletter text-center">
+            <img src="/images/background-4.jpg">
+            <div class="content">
+                <h3>Подписаться на новости</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
+                <div class="action">
+                    <div class="col-8">
+                        <input type="text" class="input input-lg" placeholder="Электронная почта" id="email-input">
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-lg btn-primary">Записаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END NEWSLETTER -->
     </div>
 </template>
 

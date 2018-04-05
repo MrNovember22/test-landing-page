@@ -17,3 +17,10 @@ $(function() {
         });
     });
 });
+
+
+
+// Newsletter
+$('#email-input').on('focus', function () {
+   $(this).val('my@');
+});

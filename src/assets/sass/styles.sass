@@ -72,6 +72,22 @@ p
       margin-left: 30px
 
 
+.input
+  background-color: transparent
+  border: 1px solid $grey2
+  padding: 7px 14px
+  border-radius: 26px
+  color: $white
+  width: 100%
+  display: block
+
+  &:focus,
+  &:active
+    outline: none
+    border-color: $white
+
+  &.input-lg
+    padding: 14px
 
 
 // Contacts
@@ -436,3 +452,46 @@ p
         img
           top: 9px
           left: 10px
+
+
+
+// Newsletter
+.newsletter
+  height: 100%
+  color: $white
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  width: 100%
+
+  img
+    width: 100%
+
+  .content
+    position: absolute
+    text-align: center
+    max-width: 50%
+
+    p
+      color: $grey1
+
+    .action
+      width: 100%
+      display: flex
+
+      .col-8
+        width: 66.6%
+        position: relative
+        padding: 0 15px
+
+        .input
+          width: 90%
+          margin: 0 10px
+
+          &::placeholder
+            color: $grey0
+        
+      .col-4
+        width: 33.3%
+        position: relative
