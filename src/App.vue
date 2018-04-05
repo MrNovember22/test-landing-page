@@ -82,7 +82,7 @@
             <img src="/images/background-1.jpg">
             <div class="content">
                 <h1>Фитнесс Центр</h1>
-                <h5>Начните свой путь к здоровому образу жизни с помощью наших персонализированных программ</h5>
+                <h6>Начните свой путь к здоровому образу жизни с помощью наших персонализированных программ</h6>
                 <button type="button" class="btn btn-primary btn-lg">Записаться</button>
             </div>
         </div>
@@ -98,7 +98,7 @@
                 <div class="service">
                     <img src="/images/trainer.png">
                     <div class="title">
-                        <h2>Личный тренер</h2>
+                        <h5>Личный тренер</h5>
                     </div>
                     <div class="description">
                         <p>235грн</p>
@@ -110,7 +110,7 @@
                 <div class="service">
                     <img src="/images/jim.png">
                     <div class="title">
-                        <h2>Тренажерный зал</h2>
+                        <h5>Тренажерный зал</h5>
                     </div>
                     <div class="description">
                         <p>330грн</p>
@@ -122,7 +122,7 @@
                 <div class="service">
                     <img src="/images/group.png">
                     <div class="title">
-                        <h2>Групповые занятия</h2>
+                        <h5>Групповые занятия</h5>
                     </div>
                     <div class="description">
                         <p>180грн</p>
@@ -134,7 +134,7 @@
                 <div class="service">
                     <img src="/images/boxing.png">
                     <div class="title">
-                        <h2>Бокс</h2>
+                        <h5>Бокс</h5>
                     </div>
                     <div class="description">
                         <p>210грн</p>
@@ -235,6 +235,80 @@
             </div>
         </div>
         <!-- END TRAINERS -->
+
+        <!-- FIRST LESSON -->
+        <div class="first-lesson text-center">
+            <img src="/images/background-3.jpg">
+            <div class="content">
+                <h3>Первое занятие у нас бесплатно</h3>
+                <button type="button" class="btn btn-lg btn-outline">Записаться</button>
+            </div>
+        </div>
+        <!-- END FIRST LESSON -->
+
+        <!-- TESTIMONIALS -->
+        <div class="container">
+            <div class="hr-text">
+                <span>Отзывы</span>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <img src="/images/trainers/1.png">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla."</p>
+                    </div>
+                    <div class="name">
+                        <h6>
+                            <i class="fa fa-quote-left"></i>
+                            John Doe
+                        </h6>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <img src="/images/trainers/2.png">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla."</p>
+                    </div>
+                    <div class="name">
+                        <h6>
+                            <i class="fa fa-quote-left"></i>
+                            Monika Smith
+                        </h6>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <img src="/images/trainers/3.png">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla."</p>
+                    </div>
+                    <div class="name">
+                        <h6>
+                            <i class="fa fa-quote-left"></i>
+                            Ross Bing
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrows">
+                <div class="arrow arrow-left">
+                    <img src="/images/icons/left-angle-bracket.png">
+                </div>
+                <div class="arrow arrow-right">
+                    <img src="/images/icons/play-symbol.png">
+                </div>
+            </div>
+        </div>
+        <!-- END TESTIMONIALS -->
     </div>
 </template>
 
