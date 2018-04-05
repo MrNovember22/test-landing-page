@@ -83,7 +83,7 @@
             <div class="content">
                 <h1>Фитнесс Центр</h1>
                 <h6>Начните свой путь к здоровому образу жизни с помощью наших персонализированных программ</h6>
-                <button type="button" class="btn btn-primary btn-lg">Записаться</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal">Записаться</button>
             </div>
         </div>
         <!-- END FITNESS CENTER -->
@@ -176,7 +176,7 @@
                     </div>
 
                     <div class="video">
-                        <div class="youtube" id="EykWcFEtFqo" style="width:800px; height:480px"></div>
+                        <div class="youtube" id="EykWcFEtFqo" style="height:480px"></div>
                     </div>
                 </div>
             </div>
@@ -241,7 +241,7 @@
             <img src="/images/background-3.jpg">
             <div class="content">
                 <h3>Первое занятие у нас бесплатно</h3>
-                <button type="button" class="btn btn-lg btn-outline">Записаться</button>
+                <button type="button" class="btn btn-lg btn-outline" data-toggle="modal">Записаться</button>
             </div>
         </div>
         <!-- END FIRST LESSON -->
@@ -327,16 +327,138 @@
             </div>
         </div>
         <!-- END NEWSLETTER -->
+
+
+        <!-- MODAL -->
+        <div style="display: none;">
+            <div class="box-modal" id="exampleModal">
+                <div class="box-modal_close arcticmodal-close" @click="clearInputs">
+                    <span>×</span>
+                </div>
+
+                <h5>Введите свои данные</h5>
+
+                <!--<div v-show="hasCustomer !== false && onCheck === true">-->
+                    <!--<div class="programs">-->
+                        <!--<div class="program" v-for="program in checkedPrograms">-->
+                            <!--<label class="custom-checkbox" for="personal">-->
+                                <!--Название: <span></span>-->
+                                <!--Цена: <span></span>-->
+                                <!--График: <span></span>-->
+                                <!--Место <span></span>-->
+                                <!--<input type="checkbox" value="personal" v-model="checkedPrograms">-->
+                                <!--<span class="checkmark"></span>-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div>
+                <!--<div v-show="hasCustomer === false">-->
+                    <input type="text" id="name" v-model="customer.name" class="input" placeholder="Имя">
+                    <input type="text" id="age" v-model="customer.age" class="input" placeholder="Возраст">
+                    <input type="text" id="weight" v-model="customer.weight" class="input" placeholder="Вес">
+                    <input type="text" id="sex" v-model="customer.sex" class="input" placeholder="Пол">
+                    <input type="text" id="sports" v-model="customer.sports" class="input" placeholder="Список видов спорта">
+
+                    <div class="programs" v-show="filled === true">
+                        <div class="program" v-show="customer.weight == '70'">
+                            <label class="custom-checkbox" for="personal">
+                                Название: <span>Личный тренер </span> <br>
+                                Цена: <span>235грн </span> <br>
+                                График: <span>Пн-Сб 9:00-22:00 </span> <br>
+                                Место <span>проведения: Зал 1</span>
+                                <input type="checkbox" id="personal" value="personal" v-model="checkedPrograms">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div class="program" v-show="customer.weight == '70'">
+                            <label class="custom-checkbox" for="gim">
+                                Название: Тренажерный зал
+                                Цена: 235грн <br>
+                                График: Пн-Сб 9:00-22:00 <br>
+                                Место проведения: Зал 1
+                                <input type="checkbox" id="gim" value="gim" v-model="checkedPrograms">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div class="program" v-show="customer.weight < '70'">
+                            <label class="custom-checkbox" for="groups">
+                                Название: Групповые занятия
+                                Цена: 235грн <br>
+                                График: Пн-Сб 9:00-22:00 <br>
+                                Место проведения: Зал 2
+                                <input type="checkbox" id="groups" value="groups" v-model="checkedPrograms">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div class="program" v-show="customer.age <= '12'">
+                            <label class="custom-checkbox" for="boxing">
+                                Название: Бокс
+                                Цена: 235грн <br>
+                                График: Пн-Сб 9:00-22:00 <br>
+                                Место проведения: Зал 3
+                                <input type="checkbox" id="boxing" value="boxing" v-model="checkedPrograms">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" v-if="onCheck" @click="closeModal">Записаться</button>
+                </div>
+            </div>
+        </div>
+        <!-- END MODAL -->
     </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    name: 'customer',
+
+    data() {
+        return {
+            customer: {
+                name: 'Даниил',
+                age: '24',
+                weight: '70',
+                sex: 'мужской',
+                sports: 'тренажерный зал, бег'
+            },
+
+            checkedPrograms: []
+        }
+    },
+
+    computed: {
+        filled: function () {
+            if (this.customer.name && this.customer.age && this.customer.weight && this.customer.sex && this.customer.sports) {
+                return true;
+            }
+        },
+
+        onCheck() {
+            if (this.checkedPrograms.length > 0) {
+                return true;
+            }
+        }
+    },
+
+    methods: {
+        clearInputs(e) {
+            e.preventDefault();
+
+            this.$data.customer = {};
+        },
+
+        closeModal(e) {
+            e.preventDefault();
+
+            $('#exampleModal').arcticmodal('close');
+        }
     }
-  }
 }
 </script>
