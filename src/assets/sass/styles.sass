@@ -78,7 +78,7 @@ p
   padding: 7px 14px
   border-radius: 26px
   color: $white
-  width: 100%
+  width: 80%
   display: block
 
   &:focus,
@@ -215,7 +215,6 @@ p
     overflow: hidden
 
     img
-      width: 100%
       position: relative
 
     .title
@@ -495,3 +494,82 @@ p
       .col-4
         width: 33.3%
         position: relative
+
+
+
+// Modal
+.box-modal
+  width: auto
+  max-width: 800px
+  margin: 1.75rem auto
+
+  .box-modal_close
+    font-size: 30px
+    right: 14px
+    top: 14px
+
+  h5
+    margin: 0 70px 14px 0
+
+  .input
+    border-color: $grey3
+    color: $dark
+    margin-bottom: 10px
+
+    &:focus,
+    &:active
+      border-color: $orange
+
+  .programs
+    padding: 10px
+    display: flex
+    
+    .program
+      width: 50%
+
+      .custom-checkbox
+        display: block
+        position: relative
+        padding-left: 35px
+        margin-bottom: 12px
+        cursor: pointer
+        font-size: 18px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+        input
+          position: absolute
+          opacity: 0
+          cursor: pointer
+
+          &:checked
+            ~ .checkmark
+              background-color: $orange
+
+              &::after
+                display: block
+
+        .checkmark
+          position: absolute
+          top: 0
+          left: 0
+          height: 22px
+          width: 22px
+          background-color: $grey0
+
+          &:after
+            content: ""
+            position: absolute
+            display: none
+            left: 8px
+            top: 3px
+            width: 4px
+            height: 9px
+            border: solid white
+            border-width: 0 3px 3px 0
+            -webkit-transform: rotate(45deg)
+            -ms-transform: rotate(45deg)
+            transform: rotate(45deg)
+
