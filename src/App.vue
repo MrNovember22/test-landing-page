@@ -321,7 +321,7 @@
                         <input type="text" class="input input-lg" placeholder="Электронная почта" id="email-input">
                     </div>
                     <div class="col-4">
-                        <button type="button" class="btn btn-lg btn-primary">Записаться</button>
+                        <button type="button" class="btn btn-lg btn-primary">Подписаться</button>
                     </div>
                 </div>
             </div>
