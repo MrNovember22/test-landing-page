@@ -266,7 +266,7 @@ p {
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-  height: auto;
+  height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -952,7 +952,7 @@ p {
   }
 
   .navbar .navbar-nav .nav-item .nav-link {
-    height: auto;
+    height: 48px;
   }
 
   .fitness-center .content {
@@ -1065,6 +1065,10 @@ p {
     width: 70%;
   }
 
+  .navbar .navbar-nav .nav-item .nav-link {
+    height: 67px;
+  }
+
   .services {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1139,6 +1143,10 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
     margin-left: 0;
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link {
+    height: 44px;
   }
 
   .fitness-center .content {
