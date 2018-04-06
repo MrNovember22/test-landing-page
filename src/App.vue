@@ -346,77 +346,62 @@
 
                 <h5>Введите свои данные</h5>
 
-                <!--<div v-show="hasCustomer !== false && onCheck === true">-->
-                    <!--<div class="programs">-->
-                        <!--<div class="program" v-for="program in checkedPrograms">-->
-                            <!--<label class="custom-checkbox" for="personal">-->
-                                <!--Название: <span></span>-->
-                                <!--Цена: <span></span>-->
-                                <!--График: <span></span>-->
-                                <!--Место <span></span>-->
-                                <!--<input type="checkbox" value="personal" v-model="checkedPrograms">-->
-                                <!--<span class="checkmark"></span>-->
-                            <!--</label>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <div>
-                <!--<div v-show="hasCustomer === false">-->
+                <div id="customer-form">
                     <input type="text" id="name" v-model="customer.name" class="input" placeholder="Имя">
                     <input type="text" id="age" v-model="customer.age" class="input" placeholder="Возраст">
                     <input type="text" id="weight" v-model="customer.weight" class="input" placeholder="Вес">
                     <input type="text" id="sex" v-model="customer.sex" class="input" placeholder="Пол">
                     <input type="text" id="sports" v-model="customer.sports" class="input" placeholder="Список видов спорта">
+                </div>
 
-                    <div class="programs" v-show="filled === true">
-                        <div class="program" v-show="customer.weight == '70'">
-                            <label class="custom-checkbox" for="personal">
-                                Название: <span>Личный тренер </span> <br>
-                                Цена: <span>235грн </span> <br>
-                                График: <span>Пн-Сб 9:00-22:00 </span> <br>
-                                Место <span>проведения: Зал 1</span>
-                                <input type="checkbox" id="personal" value="personal" v-model="checkedPrograms">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-
-                        <div class="program" v-show="customer.weight == '70'">
-                            <label class="custom-checkbox" for="gim">
-                                Название: Тренажерный зал
-                                Цена: 235грн <br>
-                                График: Пн-Сб 9:00-22:00 <br>
-                                Место проведения: Зал 1
-                                <input type="checkbox" id="gim" value="gim" v-model="checkedPrograms">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-
-                        <div class="program" v-show="customer.weight < '70'">
-                            <label class="custom-checkbox" for="groups">
-                                Название: Групповые занятия
-                                Цена: 235грн <br>
-                                График: Пн-Сб 9:00-22:00 <br>
-                                Место проведения: Зал 2
-                                <input type="checkbox" id="groups" value="groups" v-model="checkedPrograms">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-
-                        <div class="program" v-show="customer.age <= '12'">
-                            <label class="custom-checkbox" for="boxing">
-                                Название: Бокс
-                                Цена: 235грн <br>
-                                График: Пн-Сб 9:00-22:00 <br>
-                                Место проведения: Зал 3
-                                <input type="checkbox" id="boxing" value="boxing" v-model="checkedPrograms">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
+                <div class="programs" v-show="filled === true">
+                    <div class="program" v-show="customer.weight == '70'">
+                        <label class="custom-checkbox" for="personal">
+                            Название: <span>Личный тренер </span> <br>
+                            Цена: <span>235грн </span> <br>
+                            График: <span>Пн-Сб 9:00-22:00 </span> <br>
+                            Место <span>проведения: Зал 1</span>
+                            <input type="checkbox" id="personal" value="personal" v-model="checkedPrograms">
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" v-if="onCheck" @click="closeModal">Записаться</button>
+                    <div class="program" v-show="customer.weight > '35'">
+                        <label class="custom-checkbox" for="gim">
+                            Название: Тренажерный зал
+                            Цена: 235грн <br>
+                            График: Пн-Сб 9:00-22:00 <br>
+                            Место проведения: Зал 1
+                            <input type="checkbox" id="gim" value="gim" v-model="checkedPrograms">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="program" v-show="customer.weight < '70'">
+                        <label class="custom-checkbox" for="groups">
+                            Название: Групповые занятия
+                            Цена: 235грн <br>
+                            График: Пн-Сб 9:00-22:00 <br>
+                            Место проведения: Зал 2
+                            <input type="checkbox" id="groups" value="groups" v-model="checkedPrograms">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="program" v-show="customer.age <= '25'">
+                        <label class="custom-checkbox" for="boxing">
+                            Название: Бокс
+                            Цена: 235грн <br>
+                            График: Пн-Сб 9:00-22:00 <br>
+                            Место проведения: Зал 3
+                            <input type="checkbox" id="boxing" value="boxing" v-model="checkedPrograms">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
                 </div>
+
+                <button type="submit" class="btn btn-primary" v-if="onCheck" @click="savePrograms" id="save-programs">Записаться</button>
+                <button type="submit" class="btn btn-primary" @click="morePrograms" id="more-programs" style="display: none;">Записаться ещё</button>
             </div>
         </div>
         <!-- END MODAL -->
@@ -498,14 +483,14 @@ export default {
     data() {
         return {
             customer: {
-                name: 'Даниил',
-                age: '24',
-                weight: '70',
-                sex: 'мужской',
-                sports: 'тренажерный зал, бег'
+                name: '',
+                age: '',
+                weight: '',
+                sex: '',
+                sports: ''
             },
 
-            checkedPrograms: []
+            checkedPrograms: [],
         }
     },
 
@@ -524,16 +509,22 @@ export default {
     },
 
     methods: {
-        clearInputs(e) {
-            e.preventDefault();
-
+        clearInputs() {
             this.$data.customer = {};
         },
 
-        closeModal(e) {
-            e.preventDefault();
+        savePrograms() {
+            $('#exampleModal').arcticmodal('close'); // Close modal
 
-            $('#exampleModal').arcticmodal('close');
+            $('#customer-form').hide(); // Hide customer form
+            $('#save-programs').hide(); // Hide "Записаться" button
+            $('#more-programs').show(); // Show "Записаться ещё" button
+        },
+
+        morePrograms() {
+            $('#customer-form').show(); // Show customer form
+            $('#more-programs').hide(); // Hide "Записаться ещё" button
+            $('#save-programs').show(); // Show "Записаться" button
         }
     }
 }
