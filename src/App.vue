@@ -255,7 +255,7 @@
             <div class="testimonials">
                 <div class="testimonial">
                     <div class="testimonial-avatar">
-                        <img src="/images/trainers/1.png">
+                        <img src="/images/testimonials/1.png">
                     </div>
                     <div class="testimonial-text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
@@ -263,29 +263,14 @@
                     <div class="name">
                         <h6>
                             <i class="fa fa-quote-left"></i>
-                            John Doe
+                            Jane Doe
                         </h6>
                     </div>
                 </div>
 
                 <div class="testimonial">
                     <div class="testimonial-avatar">
-                        <img src="/images/trainers/2.png">
-                    </div>
-                    <div class="testimonial-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
-                    </div>
-                    <div class="name">
-                        <h6>
-                            <i class="fa fa-quote-left"></i>
-                            Monika Smith
-                        </h6>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-avatar">
-                        <img src="/images/trainers/3.png">
+                        <img src="/images/testimonials/2.png">
                     </div>
                     <div class="testimonial-text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
@@ -294,6 +279,21 @@
                         <h6>
                             <i class="fa fa-quote-left"></i>
                             Ross Bing
+                        </h6>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <img src="/images/testimonials/3.png">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor velit sed ultrices fermentum. Phasellus at nisl dictum, facilisis metus id, dignissim tortor. Suspendisse elementum lacus ac nibh placerat, in aliquam nulla.</p>
+                    </div>
+                    <div class="name">
+                        <h6>
+                            <i class="fa fa-quote-left"></i>
+                            Monika Smith
                         </h6>
                     </div>
                 </div>
@@ -327,6 +327,15 @@
             </div>
         </div>
         <!-- END NEWSLETTER -->
+
+        <!-- MAP -->
+        <div class="map">
+            <img src="/images/map.png">
+            <div class="icon">
+                <img src="/images/icons/facebook-placeholder-for-locate-places-on-maps.png">
+            </div>
+        </div>
+        <!-- END MAP -->
 
 
         <!-- MODAL -->
