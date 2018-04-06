@@ -423,6 +423,7 @@
 
         <!-- FOOTER -->
         <div class="footer">
+            <img src="/images/footer.png">
             <div class="container">
                 <div class="main">
                     <div class="logo">
