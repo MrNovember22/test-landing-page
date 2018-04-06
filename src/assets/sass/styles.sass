@@ -91,6 +91,8 @@ p
     padding: 14px
 
 
+
+
 // Contacts
 .contacts
   display: flex
@@ -131,10 +133,9 @@ p
   position: sticky
   top: 0
   z-index: 999
+  box-shadow: 0 1px 1px $grey0
 
   .navbar-brand
-    line-height: inherit
-    white-space: nowrap
     display: inline-block
 
   .navbar-nav
@@ -148,6 +149,7 @@ p
     float: right
     margin: 0
     margin-left: auto
+    align-items: center
 
     .nav-item
       margin: 0 22px
@@ -156,7 +158,7 @@ p
         margin-right: 0
 
       .nav-link
-        height: 73px
+        height: auto
         display: flex
         -webkit-box-align: center
         cursor: pointer
@@ -177,7 +179,7 @@ p
 
 // Content
 .fitness-center
-  height: 786px
+  height: auto
   color: $white
   display: flex
   justify-content: center
@@ -191,7 +193,7 @@ p
   .content
     position: absolute
     text-align: center
-    max-width: 50%
+    width: 50%
 
     h6
       color: $grey2
@@ -232,7 +234,7 @@ p
       display: none
 
     &:hover
-      transform: scale(1.03, 1.03)
+      transform: scale(1.05, 1.05)
       z-index: 2
 
       .title
@@ -252,7 +254,7 @@ p
 
 // About us
 .about-us
-  height: 1029px
+  height: auto
   color: $white
   display: flex
   justify-content: center
@@ -289,14 +291,12 @@ p
     .video
       position: relative
       display: block
-      height: 0
       padding: 0
       overflow: hidden
-      padding-bottom: 43%
       width: 70%
       margin: 0 auto
       background: url("/images/video-background.png") no-repeat center center
-      margin-top: 40px
+      height: 100%
 
       .youtube
         position: relative
@@ -305,6 +305,7 @@ p
         transition: all 200ms ease-out
         cursor: pointer
         z-index: 10
+        height: 100%
 
         .play
           background: url("/images/play-button.png") no-repeat center center
@@ -328,7 +329,7 @@ p
   display: flex
 
   .trainer
-    max-width: 25%
+    width: 25%
     text-align: center
     display: block
     margin: 0 20px
@@ -370,7 +371,7 @@ p
 
 // First lesson
 .first-lesson
-  height: 100%
+  height: auto
   color: $white
   display: flex
   justify-content: center
@@ -388,13 +389,14 @@ p
 
 
 
+
 // Testimonials
 .testimonials
   display: flex
   margin-bottom: 40px
 
   .testimonial
-    max-width: 33%
+    width: 33%
     text-align: center
     margin: 0 15px
 
@@ -465,13 +467,10 @@ p
   overflow: hidden
   width: 100%
 
-  img
-    width: 100%
-
   .content
     position: absolute
     text-align: center
-    max-width: 50%
+    width: 50%
 
     p
       color: $grey1
@@ -479,22 +478,20 @@ p
     .action
       width: 100%
       display: flex
+      justify-content: center
 
       .col-8
-        width: 66.6%
-        position: relative
         padding: 0 15px
+        display: inline-block
+        width: 60%
 
         .input
-          width: 90%
-          margin: 0 10px
-
           &::placeholder
             color: $grey0
         
       .col-4
-        width: 33.3%
-        position: relative
+        padding: 0 15px
+        display: inline-block
 
 
 
@@ -577,6 +574,7 @@ p
 
 
 
+
 // Map
 .map
   height: 100%
@@ -598,20 +596,23 @@ p
 
 
 
-// Foooter
+
+// Footer
 .footer
-  height: 100%
   color: $white
   display: block
   overflow: hidden
   width: 100%
-  background: url("/images/footer.png") no-repeat center
+  position: relative
+  height: 350px
 
   .container
+    position: absolute
     padding-bottom: 20px
     display: flex
     justify-content: space-between
     color: $grey4
+    top: 0
 
     h6
       color: $dark
@@ -631,8 +632,9 @@ p
           .svg-inline--fa
             color: $grey4
 
+
     .main
-      max-width: 40%
+      width: 40%
 
       .social
         a
@@ -651,13 +653,365 @@ p
             background-color: $orange
             color: $white
 
+
     .menu,
     .contact-us,
     .schedule
-      max-width: 20%
+      width: 20%
+
 
   .copyright
+    position: absolute
+    bottom: 0
     text-align: center
     width: 100%
     color: $grey4
     padding-bottom: 20px
+
+
+
+// Resposive
+@media (max-width: 1119px)
+  .container
+    padding: 35px
+
+  .hr-text
+    font-size: 35px
+    margin-bottom: 35px
+
+
+
+
+  .contacts
+    padding: 0 60px
+    max-width: 100%
+    height: auto
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+    p
+      margin: 5px 0
+
+
+
+
+  .navbar
+    padding: 0 60px
+    display: flex
+    max-width: 100%
+    height: auto
+
+    .navbar-brand
+      img
+        width: 90%
+
+    .navbar-nav
+      padding-left: 0
+      width: auto
+      height: 48px
+
+      .nav-item
+        margin: 0 5px
+
+        .nav-link
+          height: auto
+
+
+
+
+  .fitness-center
+    .content
+      width: 60%
+
+      h1
+        margin: 10px
+        font-size: 40px
+
+
+
+
+  .services
+    flex-wrap: wrap
+    justify-content: center
+
+    .service
+      &:hover
+        .title
+          top: 70px
+
+
+
+
+  .about-us
+    .content
+      margin-top: 0
+
+      .text
+        width: auto
+
+      .advantages
+        .advantage
+          padding: 20px 0
+
+      .video
+        margin-top: 0
+        width: auto
+        overflow: hidden
+        padding-bottom: 0
+
+
+
+
+  .trainers
+    flex-wrap: wrap
+
+    .trainer
+      width: 50%
+      margin: 0
+
+
+
+
+  .first-lesson
+    h3
+      font-size: 25px
+
+
+
+
+  .testimonials
+    .testimonial
+      margin: 0 5px
+
+      .testimonial-text
+        padding: 5px
+
+
+
+
+  .newsletter
+    .content
+      width: 100%
+
+      h3
+        margin: 10px 0
+
+      p
+        margin-bottom: 10px
+        margin-top: 0
+
+
+
+
+  .footer
+    .container
+      padding: 15px !important
+
+      .main
+        width: 35%
+
+      .menu,
+      .schedule
+        width: 14%
+
+      .contact-us
+        width: 28%
+
+
+
+@media (max-width: 575px)
+  .contacts
+    padding: 5px 10px
+    flex-direction: column
+
+
+
+  .navbar
+    padding: 10px
+
+    .navbar-brand
+      img
+        width: 70%
+
+
+
+  .services
+    flex-wrap: wrap
+
+    .service
+      max-height: 300px
+      max-width: 50%
+
+      &:hover
+        .title
+          top: 35px
+
+        .description
+          bottom: 20px
+
+
+
+@media (max-width: 425px)
+  .container
+    padding: 15px
+
+  .hr-text
+    font-size: 25px
+    margin-bottom: 15px
+
+
+
+  .btn
+    &.btn-md
+      padding: 7px 20px
+
+    &.btn-lg
+      padding: 7px 50px
+
+
+  .input
+    &.input-lg
+      padding: 7px
+      width: 90%
+
+
+
+
+  .contacts
+    padding: 5px 10px
+    max-width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+
+
+
+
+  .navbar
+    padding: 5px
+    justify-content: center
+
+    .navbar-brand
+      img
+        width: 85px
+
+    .navbar-nav
+      height: 40px
+      flex-wrap: wrap
+      justify-content: center
+      margin-left: 0
+
+
+
+
+  .fitness-center
+    .content
+      width: 100%
+
+      h1
+        font-size: 28px
+
+      h6
+        margin-bottom: 14px
+
+
+
+
+  .services
+    flex-direction: column
+    width: 100%
+
+    .service
+      height: 350px
+      max-width: 80%
+      margin-left: auto
+      margin-right: auto
+
+
+
+
+  .about-us
+    .content
+      .container
+        padding: 20px
+
+        .advantages
+          flex-wrap: wrap
+          flex-direction: row
+
+          .advantage
+            padding: 20px 7px
+            word-break: break-all
+            width: 45%
+
+        .video,
+        .youtube
+          max-height: 340px
+
+
+
+
+  .trainers
+    .trainer
+      width: 100%
+
+
+
+
+  .first-lesson
+    h3
+      font-size: 18px
+      margin: 5px 0
+
+
+
+
+  .testimonials
+    flex-direction: column
+    margin-bottom: 10px
+
+    .testimonial
+      margin-bottom: 20px
+      width: 100%
+
+
+
+
+  .newsletter
+    .content
+      .action
+        flex-direction: column
+        align-items: center
+
+        .col-8
+          margin-bottom: 14px
+
+
+
+
+  .footer
+    height: 475px
+
+    img
+      height: 100%
+
+    .container
+      padding: 10px !important
+      flex-wrap: wrap
+
+      .main
+        .social
+          a
+            margin-bottom: 5px
+
+      .main,
+      .menu,
+      .contact-us,
+      .schedule
+        width: 50%
+
+      .menu,
+      .contact-us,
+      .schedule
+        text-align: center
