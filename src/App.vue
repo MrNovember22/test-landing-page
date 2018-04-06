@@ -337,7 +337,6 @@
         </div>
         <!-- END MAP -->
 
-
         <!-- MODAL -->
         <div style="display: none;">
             <div class="box-modal" id="exampleModal">
@@ -421,6 +420,73 @@
             </div>
         </div>
         <!-- END MODAL -->
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container">
+                <div class="main">
+                    <div class="logo">
+                        <img src="/images/logo.png">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacus metus, eleifend posuere tellus a, commodo tempus ligula.</p>
+                    </div>
+
+                    <div class="social">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <h6>Страницы</h6>
+
+                    <ul class="menu-list">
+                        <li>О нас</li>
+                        <li>Услуги</li>
+                        <li>Расписание</li>
+                        <li>Цены</li>
+                        <li>Команда</li>
+                        <li>Контакты</li>
+                    </ul>
+                </div>
+                <div class="contact-us">
+                    <h6>Контакты</h6>
+
+                    <ul class="menu-list">
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            +38 050 32 45 555
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            mail@fitness.org
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            г. Киев, ул.Центр, дом 1
+                        </li>
+                    </ul>
+                </div>
+                <div class="schedule">
+                    <h6>График работы</h6>
+
+                    <p>Пн-Сб 9:00-22:00</p>
+                    <p>Вс 10:00-22:00</p>
+                </div>
+            </div>
+            <div class="copyright">
+                2017 © Все права защищены.
+            </div>
+        </div>
+        <!-- END FOOTER -->
     </div>
 </template>
 
