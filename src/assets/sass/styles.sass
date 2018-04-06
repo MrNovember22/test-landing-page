@@ -1,0 +1,1017 @@
+@import "varibles"
+@import "helpers"
+@import "buttons"
+
+
+
+// Main styles
+body
+  margin: 0
+  font-size: 15px
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $dark
+
+h1
+  font-size: 66px
+
+h2
+  font-size: 40px
+
+h3
+  font-size: 34px
+
+h4
+  font-size: 26px
+
+h5
+  font-size: 22px
+
+h6
+  font-size: 18px
+  font-weight: 100
+  margin-top: 0
+
+a
+  text-decoration: none
+  outline: none
+
+p
+  line-height: 1.25
+
+.container
+  padding: 40px 115px 80px
+
+.hr-text
+  display: block
+  text-align: center
+  overflow: hidden
+  white-space: nowrap
+  margin-bottom: 40px
+  font-size: 40px
+
+  span
+    position: relative
+    display: inline-block
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      width: 100px
+      height: 1px
+      background: $grey0
+
+    &:before
+      right: 100%
+      margin-right: 30px
+
+    &:after
+      left: 100%
+      margin-left: 30px
+
+
+.input
+  background-color: transparent
+  border: 1px solid $grey2
+  padding: 7px 14px
+  border-radius: 26px
+  color: $white
+  width: 80%
+  display: block
+
+  &:focus,
+  &:active
+    outline: none
+    border-color: $white
+
+  &.input-lg
+    padding: 14px
+
+
+
+
+// Contacts
+.contacts
+  display: flex
+  align-items: center
+  justify-content: space-between
+  color: $white
+  background-color: $dark
+  height: 48px
+  padding: 0 115px
+
+  p
+    &:hover
+      color: $orange
+      cursor: pointer
+
+  .svg-inline--fa
+    color: $white
+
+  .social-links
+    .svg-inline--fa
+      color: $white
+      margin: 0 2px
+
+      &:hover
+        color: $orange
+
+
+
+
+// Navbar
+.navbar
+  background-color: $white
+  height: 75px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  padding: 0 115px
+  position: sticky
+  top: 0
+  z-index: 999
+  box-shadow: 0 1px 1px $grey0
+
+  .navbar-brand
+    display: inline-block
+
+  .navbar-nav
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    height: 75px
+    list-style: none
+    display: flex
+    float: right
+    margin: 0
+    margin-left: auto
+    align-items: center
+
+    .nav-item
+      margin: 0 22px
+
+      &:last-of-type
+        margin-right: 0
+
+      .nav-link
+        height: auto
+        display: flex
+        -webkit-box-align: center
+        cursor: pointer
+        align-items: center
+        justify-content: center
+        color: $dark
+        border-bottom: 2px solid transparent
+
+        &.active
+          color: $orange
+
+        &:hover
+          color: $orange
+          border-bottom: 2px solid $orange
+
+
+
+
+// Content
+.fitness-center
+  height: auto
+  color: $white
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  width: 100%
+
+  img
+    width: 100%
+    
+  .content
+    position: absolute
+    text-align: center
+    width: 50%
+
+    h6
+      color: $grey2
+
+
+
+
+// Services
+.services
+  position: relative
+  display: flex
+
+  .service
+    max-width: 25%
+    position: relative
+    color: white
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    max-height: 445px
+    overflow: hidden
+
+    img
+      position: relative
+
+    .title
+      position: absolute
+      color: $white
+      margin: 0
+      line-height: 1
+
+    .description
+      position: absolute
+      padding: 0 20px
+      color: $grey0
+      text-shadow: -1px 0 rgba(0, 0, 0, 0.15), 0 1px rgba(0, 0, 0, 0.15), 1px 0 rgba(0, 0, 0, 0.15), 0 -1px rgba(0, 0, 0, 0.15)
+      display: none
+
+    &:hover
+      transform: scale(1.05, 1.05)
+      z-index: 2
+
+      .title
+        top: 100px
+
+        h5
+          margin: 20px 0
+
+      .description
+        bottom: 100px
+        position: fixed
+        display: block
+        font-weight: 400
+
+
+
+
+// About us
+.about-us
+  height: auto
+  color: $white
+  display: flex
+  justify-content: center
+  overflow: hidden
+  width: 100%
+
+  img
+    width: 100%
+
+  .content
+    position: absolute
+    margin-top: 40px
+    width: 100%
+
+    .text
+      width: 50%
+      font-size: 22px
+      margin-left: auto
+      margin-right: auto
+
+    .advantages
+      display: flex
+
+      .advantage
+        width: 25%
+        padding: 20px
+
+        .icon
+          width: 42px
+          border: 2px solid rgba(238, 238, 238, 0.4)
+          border-radius: 50%
+          padding: 18px
+
+    .video
+      position: relative
+      display: block
+      padding: 0
+      overflow: hidden
+      width: 70%
+      margin: 0 auto
+      background: url("/images/video-background.png") no-repeat center center
+      height: 100%
+
+      .youtube
+        position: relative
+        display: block
+        overflow: hidden
+        transition: all 200ms ease-out
+        cursor: pointer
+        z-index: 10
+        height: 100%
+
+        .play
+          background: url("/images/play-button.png") no-repeat center center
+          background-size: 64px 64px
+          position: absolute
+          height: 100%
+          width: 100%
+          opacity: .8
+          filter: alpha(opacity=80)
+          transition: all 0.2s ease-out
+
+        &:hover
+          opacity: 1
+          filter: alpha(opacity=100)
+
+
+
+
+// Trainers
+.trainers
+  display: flex
+
+  .trainer
+    width: 25%
+    text-align: center
+    display: block
+    margin: 0 20px
+
+    a
+      display: flex
+      flex-direction: column
+      font-size: 22px
+      font-weight: 600
+      color: $dark
+
+      &:hover
+        color: $orange
+
+        .image
+          &::after
+            content: '\A'
+            position: absolute
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            top: 0
+            left: 0
+            background: rgba($orange, 0.7)
+
+      .image
+        position: relative
+        overflow: hidden
+        width: 150px
+        height: 150px
+        margin-bottom: 20px
+        margin-left: auto
+        margin-right: auto
+
+        img
+          width: 100%
+
+
+
+// First lesson
+.first-lesson
+  height: auto
+  color: $white
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  width: 100%
+
+  img
+    width: 100%
+
+  .content
+    position: absolute
+    text-align: center
+    max-width: 75%
+
+
+
+
+// Testimonials
+.testimonials
+  display: flex
+  margin-bottom: 40px
+
+  .testimonial
+    width: 33%
+    text-align: center
+    margin: 0 15px
+
+    .testimonial-avatar
+      overflow: hidden
+      width: 100%
+
+      img
+        width: 80px
+
+
+    .testimonial-text
+      padding: 10px 25px
+      color: $grey3
+
+
+    .name
+      h6
+        margin: 0
+
+        .svg-inline--fa
+          color: $grey0
+
+
+  ~ .arrows
+    width: 100%
+    display: flex
+    justify-content: center
+
+    .arrow
+      width: 48px
+      height: 48px
+      border: 2px solid $orange
+      border-radius: 50%
+      opacity: 0.3
+      transition: all .4s ease-in-out
+      text-align: center
+      position: relative
+
+      &:hover
+        opacity: 1
+
+      img
+        width: 30px
+        position: absolute
+
+      &.arrow-left
+        margin-right: 15px
+
+        img
+          top: 9px
+          left: 7px
+
+      &.arrow-right
+        img
+          top: 9px
+          left: 10px
+
+
+
+// Newsletter
+.newsletter
+  height: 100%
+  color: $white
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  width: 100%
+
+  .content
+    position: absolute
+    text-align: center
+    width: 50%
+
+    p
+      color: $grey1
+
+    .action
+      width: 100%
+      display: flex
+      justify-content: center
+
+      .col-8
+        padding: 0 15px
+        display: inline-block
+        width: 60%
+
+        .input
+          &::placeholder
+            color: $grey0
+        
+      .col-4
+        padding: 0 15px
+        display: inline-block
+
+
+
+
+// Modal
+.box-modal
+  width: auto
+  max-width: 800px
+  margin: 1.75rem auto
+
+  .box-modal_close
+    font-size: 30px
+    right: 14px
+    top: 14px
+
+  h5
+    margin: 0 70px 14px 0
+
+  .input
+    border-color: $grey3
+    color: $dark
+    margin-bottom: 10px
+
+    &:focus,
+    &:active
+      border-color: $orange
+
+  .programs
+    padding: 10px
+    display: flex
+    
+    .program
+      width: 50%
+
+      .custom-checkbox
+        display: block
+        position: relative
+        padding-left: 35px
+        margin-bottom: 12px
+        cursor: pointer
+        font-size: 18px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+        input
+          position: absolute
+          opacity: 0
+          cursor: pointer
+
+          &:checked
+            ~ .checkmark
+              background-color: $orange
+
+              &::after
+                display: block
+
+        .checkmark
+          position: absolute
+          top: 0
+          left: 0
+          height: 22px
+          width: 22px
+          background-color: $grey0
+
+          &:after
+            content: ""
+            position: absolute
+            display: none
+            left: 8px
+            top: 3px
+            width: 4px
+            height: 9px
+            border: solid white
+            border-width: 0 3px 3px 0
+            -webkit-transform: rotate(45deg)
+            -ms-transform: rotate(45deg)
+            transform: rotate(45deg)
+
+
+
+
+// Map
+.map
+  height: 100%
+  color: $white
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  width: 100%
+
+  img
+    width: 100%
+
+  .icon
+    position: absolute
+    text-align: center
+    width: 21px
+    height: 33px
+
+
+
+
+// Footer
+.footer
+  color: $white
+  display: block
+  overflow: hidden
+  width: 100%
+  position: relative
+  height: 350px
+
+  .container
+    position: absolute
+    padding-bottom: 20px
+    display: flex
+    justify-content: space-between
+    color: $grey4
+    top: 0
+
+    h6
+      color: $dark
+      margin-bottom: 15px
+
+    .menu-list
+      list-style: none
+      padding: 0
+
+      li
+        margin: 14px 0
+        cursor: pointer
+
+        &:hover
+          color: $orange
+
+          .svg-inline--fa
+            color: $grey4
+
+
+    .main
+      width: 40%
+
+      .social
+        a
+          height: 30px
+          width: 30px
+          border: 1px solid $orange
+          border-radius: 50%
+          display: inline-flex
+          align-items: center
+          justify-content: center
+          color: $orange
+          font-size: 14px
+          margin-right: 10px
+
+          &:hover
+            background-color: $orange
+            color: $white
+
+
+    .menu,
+    .contact-us,
+    .schedule
+      width: 20%
+
+
+  .copyright
+    position: absolute
+    bottom: 0
+    text-align: center
+    width: 100%
+    color: $grey4
+    padding-bottom: 20px
+
+
+
+// Resposive
+@media (max-width: 1119px)
+  .container
+    padding: 35px
+
+  .hr-text
+    font-size: 35px
+    margin-bottom: 35px
+
+
+
+
+  .contacts
+    padding: 0 60px
+    max-width: 100%
+    height: auto
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+    p
+      margin: 5px 0
+
+
+
+
+  .navbar
+    padding: 0 60px
+    display: flex
+    max-width: 100%
+    height: auto
+
+    .navbar-brand
+      img
+        width: 90%
+
+    .navbar-nav
+      padding-left: 0
+      width: auto
+      height: 48px
+
+      .nav-item
+        margin: 0 5px
+
+        .nav-link
+          height: auto
+
+
+
+
+  .fitness-center
+    .content
+      width: 60%
+
+      h1
+        margin: 10px
+        font-size: 40px
+
+
+
+
+  .services
+    flex-wrap: wrap
+    justify-content: center
+
+    .service
+      &:hover
+        .title
+          top: 70px
+
+
+
+
+  .about-us
+    .content
+      margin-top: 0
+
+      .text
+        width: auto
+
+      .advantages
+        .advantage
+          padding: 20px 0
+
+      .video
+        margin-top: 0
+        width: auto
+        overflow: hidden
+        padding-bottom: 0
+
+
+
+
+  .trainers
+    flex-wrap: wrap
+
+    .trainer
+      width: 50%
+      margin: 0
+
+
+
+
+  .first-lesson
+    h3
+      font-size: 25px
+
+
+
+
+  .testimonials
+    .testimonial
+      margin: 0 5px
+
+      .testimonial-text
+        padding: 5px
+
+
+
+
+  .newsletter
+    .content
+      width: 100%
+
+      h3
+        margin: 10px 0
+
+      p
+        margin-bottom: 10px
+        margin-top: 0
+
+
+
+
+  .footer
+    .container
+      padding: 15px !important
+
+      .main
+        width: 35%
+
+      .menu,
+      .schedule
+        width: 14%
+
+      .contact-us
+        width: 28%
+
+
+
+@media (max-width: 575px)
+  .contacts
+    padding: 5px 10px
+    flex-direction: column
+
+
+
+  .navbar
+    padding: 10px
+
+    .navbar-brand
+      img
+        width: 70%
+
+
+
+  .services
+    flex-wrap: wrap
+
+    .service
+      max-height: 300px
+      max-width: 50%
+
+      &:hover
+        .title
+          top: 35px
+
+        .description
+          bottom: 20px
+
+
+
+@media (max-width: 425px)
+  .container
+    padding: 15px
+
+  .hr-text
+    font-size: 25px
+    margin-bottom: 15px
+
+
+
+  .btn
+    &.btn-md
+      padding: 7px 20px
+
+    &.btn-lg
+      padding: 7px 50px
+
+
+  .input
+    &.input-lg
+      padding: 7px
+      width: 90%
+
+
+
+
+  .contacts
+    padding: 5px 10px
+    max-width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+
+
+
+
+  .navbar
+    padding: 5px
+    justify-content: center
+
+    .navbar-brand
+      img
+        width: 85px
+
+    .navbar-nav
+      height: 40px
+      flex-wrap: wrap
+      justify-content: center
+      margin-left: 0
+
+
+
+
+  .fitness-center
+    .content
+      width: 100%
+
+      h1
+        font-size: 28px
+
+      h6
+        margin-bottom: 14px
+
+
+
+
+  .services
+    flex-direction: column
+    width: 100%
+
+    .service
+      height: 350px
+      max-width: 80%
+      margin-left: auto
+      margin-right: auto
+
+
+
+
+  .about-us
+    .content
+      .container
+        padding: 20px
+
+        .advantages
+          flex-wrap: wrap
+          flex-direction: row
+
+          .advantage
+            padding: 20px 7px
+            word-break: break-all
+            width: 45%
+
+        .video,
+        .youtube
+          max-height: 340px
+
+
+
+
+  .trainers
+    .trainer
+      width: 100%
+
+
+
+
+  .first-lesson
+    h3
+      font-size: 18px
+      margin: 5px 0
+
+
+
+
+  .testimonials
+    flex-direction: column
+    margin-bottom: 10px
+
+    .testimonial
+      margin-bottom: 20px
+      width: 100%
+
+
+
+
+  .newsletter
+    .content
+      .action
+        flex-direction: column
+        align-items: center
+
+        .col-8
+          margin-bottom: 14px
+
+
+
+
+  .footer
+    height: 475px
+
+    img
+      height: 100%
+
+    .container
+      padding: 10px !important
+      flex-wrap: wrap
+
+      .main
+        .social
+          a
+            margin-bottom: 5px
+
+      .main,
+      .menu,
+      .contact-us,
+      .schedule
+        width: 50%
+
+      .menu,
+      .contact-us,
+      .schedule
+        text-align: center
