@@ -76,6 +76,34 @@ module.exports = __webpack_require__(2);
 /***/ (function(module, exports) {
 
 
+$(function () {
+    $(".youtube").each(function () {
+        // Overlay the Play icon to make it look like a video player
+        $(this).append($('<div/>', { 'class': 'play' }));
+
+        $(document).delegate('#' + this.id, 'click', function () {
+            // Create an iFrame with autoplay set to true
+            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+            if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
+
+            // The height and width of the iFrame should be the same as parent
+            var iframe = $('<iframe/>', { 'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() });
+
+            // Replace the YouTube thumbnail with YouTube HTML5 Player
+            $(this).replaceWith(iframe);
+        });
+    });
+});
+
+// Newsletter
+$('#email-input').on('focus', function () {
+    $(this).val('my@');
+});
+
+// Modal
+$('[data-toggle="modal"]').on('click', function () {
+    $('#exampleModal').arcticmodal();
+});
 
 /***/ }),
 /* 2 */
