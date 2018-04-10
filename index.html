@@ -16,6 +16,25 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/dist/build.js"></script>
     <script src="/modal-plugin/jquery.arcticmodal-0.3.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcavxDNwiWadqrmNS44EcqreFWg-z3gyM&callback=initMap"></script>
     <script src="/public/assets/js/app.js"></script>
+    <script>
+        function initMap() {
+            let ukraine = {
+                lat: 50.450791,
+                lng: 30.523008
+            };
+
+            let map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: ukraine
+            });
+
+            let marker = new google.maps.Marker({
+                position: ukraine,
+                map: map
+            });
+        }
+    </script>
   </body>
 </html>
