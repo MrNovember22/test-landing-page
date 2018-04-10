@@ -343,10 +343,12 @@ p {
           align-items: center;
   max-height: 445px;
   overflow: hidden;
+  background: #15191c;
 }
 
 .services .service img {
   position: relative;
+  opacity: 0.5;
 }
 
 .services .service .title {
@@ -368,6 +370,11 @@ p {
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
   z-index: 2;
+  background: #fe5621;
+}
+
+.services .service:hover img {
+  opacity: 0.2;
 }
 
 .services .service:hover .title {
@@ -396,10 +403,13 @@ p {
           justify-content: center;
   overflow: hidden;
   width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #231D27), color-stop(250%, #fe5621));
+  background: linear-gradient(#231D27 30%, #fe5621 250%);
 }
 
-.about-us img {
+.about-us > img {
   width: 100%;
+  opacity: 0.15;
 }
 
 .about-us .content {
@@ -541,10 +551,12 @@ p {
           align-items: center;
   overflow: hidden;
   width: 100%;
+  background-color: #fe5621;
 }
 
 .first-lesson img {
   width: 100%;
+  opacity: 0.2;
 }
 
 .first-lesson .content {
@@ -647,6 +659,12 @@ p {
           align-items: center;
   overflow: hidden;
   width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #231D27), color-stop(250%, #fe5621));
+  background: linear-gradient(#231D27 30%, #fe5621 250%);
+}
+
+.newsletter > img {
+  opacity: 0.15;
 }
 
 .newsletter .content {
@@ -785,30 +803,8 @@ p {
 }
 
 .map {
-  height: 100%;
-  color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
   width: 100%;
-}
-
-.map img {
-  width: 100%;
-}
-
-.map .icon {
-  position: absolute;
-  text-align: center;
-  width: 21px;
-  height: 33px;
+  height: 350px;
 }
 
 .footer {
@@ -818,6 +814,10 @@ p {
   width: 100%;
   position: relative;
   height: 350px;
+}
+
+.footer > img {
+  opacity: 0.2;
 }
 
 .footer .container {

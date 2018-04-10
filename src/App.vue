@@ -329,12 +329,7 @@
         <!-- END NEWSLETTER -->
 
         <!-- MAP -->
-        <div class="map">
-            <img src="/images/map.png">
-            <div class="icon">
-                <img src="/images/icons/facebook-placeholder-for-locate-places-on-maps.png">
-            </div>
-        </div>
+        <div class="map" id="map"></div>
         <!-- END MAP -->
 
         <!-- MODAL -->
