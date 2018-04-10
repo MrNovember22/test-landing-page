@@ -216,9 +216,11 @@ p
     align-items: center
     max-height: 445px
     overflow: hidden
+    background: $dark
 
     img
       position: relative
+      opacity: 0.5
 
     .title
       position: absolute
@@ -236,6 +238,10 @@ p
     &:hover
       transform: scale(1.05, 1.05)
       z-index: 2
+      background: $orange
+
+      img
+        opacity: 0.2
 
       .title
         top: 100px
@@ -260,9 +266,14 @@ p
   justify-content: center
   overflow: hidden
   width: 100%
+  background: -webkit-linear-gradient($dark2 30%, $orange 250%) /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($dark2 30%, $orange 250%) /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($dark2 30%, $orange 250%) /* For Firefox 3.6 to 15 */
+  background: linear-gradient($dark2 30%, $orange 250%) /* Standard syntax */
 
-  img
+  > img
     width: 100%
+    opacity: 0.15
 
   .content
     position: absolute
@@ -378,9 +389,11 @@ p
   align-items: center
   overflow: hidden
   width: 100%
+  background-color: $orange
 
   img
     width: 100%
+    opacity: 0.2
 
   .content
     position: absolute
@@ -466,6 +479,13 @@ p
   align-items: center
   overflow: hidden
   width: 100%
+  background: -webkit-linear-gradient($dark2 30%, $orange 250%) /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($dark2 30%, $orange 250%) /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($dark2 30%, $orange 250%) /* For Firefox 3.6 to 15 */
+  background: linear-gradient($dark2 30%, $orange 250%) /* Standard syntax */
+
+  > img
+    opacity: 0.15
 
   .content
     position: absolute
@@ -606,6 +626,9 @@ p
   position: relative
   height: 350px
 
+  > img
+    opacity: 0.2
+
   .container
     position: absolute
     padding-bottom: 20px
@@ -667,6 +690,7 @@ p
     width: 100%
     color: $grey4
     padding-bottom: 20px
+
 
 
 
