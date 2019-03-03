@@ -7,11 +7,11 @@
                 +38 050 32 45 555
             </p>
             <p>
-                <i class="fa fa-envelope"></i>
+                <i class="fa fa-address-book"></i>
                 mail@fitness.org
             </p>
             <p>
-                <i class="fa fa-map-marker-alt"></i>
+                <i class="fa fa-map-marker"></i>
                 г. Киев, ул.Центр, дом 1
             </p>
             <p>
