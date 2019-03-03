@@ -11,7 +11,7 @@
                 mail@fitness.org
             </p>
             <p>
-                <i class="fa fa-map-marker-alt"></i>
+                <i class="fa fa-map-marker"></i>
                 г. Киев, ул.Центр, дом 1
             </p>
             <p>
